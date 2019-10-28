@@ -12,6 +12,6 @@ entries:
     sources:
     - https://github.com/gravitee-io
     urls:
-    - https://helm.elastic.co/helm/apim/apim-1.27.1.tgz
+    - https://helm.gravitee.io/helm/apim/apim-1.27.1.tgz
     version: 1.27.1
 generated: 2019-10-28T09:59:14.042251+01:00
