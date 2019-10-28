@@ -3,7 +3,20 @@ entries:
   apim:
   - apiVersion: v1
     appVersion: 1.29.4
-    created: 2019-10-28T09:59:14.046282+01:00
+    created: 2019-10-28T16:36:29.119435+01:00
+    description: Official Gravitee.io Helm chart for API Management
+    digest: a7941f9c84a52c22b36069d30fb016c3aa417043de84ecc4f4591ad06adccb86
+    home: https://gravitee.io
+    icon: https://avatars2.githubusercontent.com/u/12655666?s=200&v=4
+    name: apim
+    sources:
+    - https://github.com/gravitee-io
+    urls:
+    - https://helm.gravitee.io/helm/apim/apim-1.27.2.tgz
+    version: 1.27.2
+  - apiVersion: v1
+    appVersion: 1.29.4
+    created: 2019-10-28T16:36:29.116001+01:00
     description: Official Gravitee.io Helm chart for API Management
     digest: d8bfacdade4b44689b45c07e086883a36e7a3022b32c67ba5d39130afb9345e9
     home: https://gravitee.io
@@ -14,4 +27,4 @@ entries:
     urls:
     - https://helm.gravitee.io/helm/apim/apim-1.27.1.tgz
     version: 1.27.1
-generated: 2019-10-28T09:59:14.042251+01:00
+generated: 2019-10-28T16:36:29.110728+01:00
