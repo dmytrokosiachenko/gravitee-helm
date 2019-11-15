@@ -53,3 +53,21 @@ We truncate at 63 chars because some Kubernetes name fields are limited to this 
 {{- printf "%s-%s-%s" .Release.Name $name .Values.ui.name | trunc 63 | trimSuffix "-" -}}
 {{- end -}}
 {{- end -}}
+
+{{/*
+Filter api url from wildcards
+*/}}
+{{- define "api.management.path" -}}
+{{- $firstApiHost := index .Values.api.ingress.hosts 0 -}}
+{{- $apiPath := .Values.api.ingress.path -}}
+{{- printf "https://%s%s" $firstApiHost $apiPath | replace "*" "" -}}
+{{- end -}}
+
+{{/*
+Filter gateway url from wildcards
+*/}}
+{{- define "gateway.management.path" -}}
+{{- $firstGatewayHost := index .Values.gateway.ingress.hosts 0 -}}
+{{- $gatewayHost := .Values.gateway.ingress.path -}}
+{{- printf "https://%s%s" $firstGatewayHost $gatewayHost | replace "*" "" -}}
+{{- end -}}
