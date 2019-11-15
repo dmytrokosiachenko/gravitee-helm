@@ -40,7 +40,7 @@ spec:
           imagePullPolicy: {{ .Values.ui.image.pullPolicy }}
           env:
             - name: MGMT_API_URL
-              value: {{ template "api.management.path" . }}
+              value: {{ template "api.ingress.path.baseurl" . }}
           ports:
             - containerPort: {{ .Values.ui.service.internalPort }}
           livenessProbe:

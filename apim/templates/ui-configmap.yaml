@@ -15,7 +15,7 @@ data:
   gzip-types: "*"
   constants.json: |
     {
-      "baseURL": {{ template "api.management.path" . }},
+      "baseURL": {{ template "api.ingress.path.baseurl" . }},
       "management": {
         "title": "{{ .Values.ui.managementTitle }}"
       },
@@ -23,7 +23,7 @@ data:
         "url": "{{ .Values.ui.documentationLink }}"
       },
       "portal": {
-        "entrypoint": {{ template "gateway.management.path" . }},
+        "entrypoint": {{ template "gateway.ingress.path.entrypoint" . }},
         "title": "{{ .Values.ui.title }}"
         {{- if .Values.ui.portal }}
           {{- range $key, $value := .Values.ui.portal }},

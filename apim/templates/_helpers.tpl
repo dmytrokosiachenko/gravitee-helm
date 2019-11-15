@@ -57,7 +57,7 @@ We truncate at 63 chars because some Kubernetes name fields are limited to this 
 {{/*
 Filter api url from wildcards
 */}}
-{{- define "api.management.path" -}}
+{{- define "api.ingress.path.baseurl" -}}
 {{- $firstApiHost := index .Values.api.ingress.hosts 0 -}}
 {{- $apiPath := .Values.api.ingress.path -}}
 {{- printf "https://%s%s" $firstApiHost $apiPath | replace "*" "" -}}
@@ -66,7 +66,7 @@ Filter api url from wildcards
 {{/*
 Filter gateway url from wildcards
 */}}
-{{- define "gateway.management.path" -}}
+{{- define "gateway.ingress.path.entrypoint" -}}
 {{- $firstGatewayHost := index .Values.gateway.ingress.hosts 0 -}}
 {{- $gatewayHost := .Values.gateway.ingress.path -}}
 {{- printf "https://%s%s" $firstGatewayHost $gatewayHost | replace "*" "" -}}
